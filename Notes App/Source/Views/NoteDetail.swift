@@ -9,22 +9,50 @@ import SwiftUI
 
 struct NoteDetail: View {
     
+    @Environment(\.dismiss) var dismiss
+    @FocusState private var focusedField: FocusedField?
     @State private var title: String = ""
     @State private var details: String = ""
     
     var body: some View {
         VStack {
             TextField("Title", text: $title)
+                .focused($focusedField, equals: .title)
                 .font(.title)
                 .fontWeight(.bold)
+                
             TextEditor(text: $details)
-                .background(Color.red)
+                .focused($focusedField, equals: .details)
+                .frame(minHeight: 200)
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Done", action: doneAction)
+            }
+        })
+        .onSubmit {
+            switch focusedField {
+            case .title:
+                focusedField = .details
+            default:
+                dismiss()
+            }
+        }
+    }
+    
+    private func doneAction() {
+        defer { dismiss() }
     }
 }
 
 #Preview {
     NoteDetail()
+}
+
+extension NoteDetail {
+    enum FocusedField {
+        case title, details
+    }
 }

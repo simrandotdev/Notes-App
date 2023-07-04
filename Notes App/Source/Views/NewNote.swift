@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NewNote: View {
+    
+    @Environment(\.dismiss) var dismiss
+    @FocusState private var focusedField: FocusedField?
     @State private var title: String = ""
     @State private var details: String = ""
     
@@ -21,9 +24,32 @@ struct NewNote: View {
         }
         .padding()
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button("Done", action: doneAction)
+            }
+        })
+        .onSubmit {
+            switch focusedField {
+            case .title:
+                focusedField = .details
+            default:
+                dismiss()
+            }
+        }
+    }
+    
+    private func doneAction() {
+        defer { dismiss() }
     }
 }
 
 #Preview {
     NewNote()
+}
+
+extension NewNote {
+    enum FocusedField {
+        case title, details
+    }
 }

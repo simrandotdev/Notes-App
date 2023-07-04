@@ -24,10 +24,13 @@ struct NotesList: View {
         .toolbar(content: {
             ToolbarItem(placement: .bottomBar) {
                 HStack {
+                    Image(systemName: "")
                     Spacer()
-                    Button(action: newNoteAction, label: {
+                    NavigationLink {
+                        NewNote()
+                    } label: {
                         Image(systemName: "square.and.pencil")
-                    })
+                    }
                 }
             }
         })
