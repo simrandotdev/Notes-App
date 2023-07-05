@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct NotesListRow: View {
+    
+    var title: String
+    var subtitle: String
+    
     var body: some View {
-        NavigationLink {
-            NoteDetail()
-        } label: {
-            VStack(alignment: .leading) {
-               Text("Note")
-                    .fontWeight(.bold)
-                Text("Some note description")
-                    .font(.caption)
-                    .foregroundStyle(Color(.secondaryLabel))
-            }
+        
+        VStack(alignment: .leading) {
+           Text(title)
+                .fontWeight(.bold)
+            Text(subtitle)
+                .font(.caption)
+                .foregroundStyle(Color(.secondaryLabel))
         }
-
     }
 }
 
 #Preview {
-    NotesListRow()
+    NotesListRow(title: "Title", subtitle: "Subtitle")
 }

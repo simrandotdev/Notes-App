@@ -9,13 +9,18 @@ import SwiftUI
 
 struct NotesList: View {
     
+    var folder: Folder
+    
     @State private var searchText: String = ""
     
     var body: some View {
-        List {
-            ForEach(1..<6) { _ in
-                NotesListRow()
+        List(folder.notes, id: \.id) { note in
+            NavigationLink {
+                NoteDetail(note: note)
+            } label: {
+                NotesListRow(title: note.title, subtitle: note.details)
             }
+            
         }
         .navigationTitle("All iCloud")
         .searchable(text: $searchText,
@@ -42,5 +47,5 @@ struct NotesList: View {
 }
 
 #Preview {
-    NotesList()
+    NotesList(folder: Folder(id: 1, name: "All Cloud", notes: []))
 }

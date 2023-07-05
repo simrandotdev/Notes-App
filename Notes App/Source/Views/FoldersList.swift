@@ -9,17 +9,18 @@ import SwiftUI
 
 struct FoldersList: View {
     
+    @Environment(FoldersListViewData.self) private var viewData: FoldersListViewData
     @State private var showNewFolderSheet = false
     
     var body: some View {
         VStack {
-            List {
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
+            List(viewData.folders, id: \.id) {folder in
+                NavigationLink {
+                    NotesList(folder: folder)
+                } label: {
+                    FolderListRow(title: folder.name,
+                                  subtitle: "\(folder.totalNotes)")
+                }
             }
         }
         .navigationTitle("Folders")
@@ -45,6 +46,9 @@ struct FoldersList: View {
         .sheet(isPresented: $showNewFolderSheet, content: {
             NewFolderSheet(showNewFolderSheet: $showNewFolderSheet)
         })
+        .onAppear(perform: {
+            viewData.fetchFolders()
+        })
     }
     
     private func showNewFolderSheetAction() {
@@ -58,4 +62,9 @@ struct FoldersList: View {
 
 #Preview {
     FoldersList()
+}
+
+
+extension FoldersList {
+    
 }

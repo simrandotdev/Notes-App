@@ -14,6 +14,15 @@ struct NoteDetail: View {
     @State private var title: String = ""
     @State private var details: String = ""
     
+    var note: Note
+    
+    init(note: Note) {
+        self.note = note
+        _title = State(initialValue: note.title)
+        _details = State(initialValue: note.details)
+        
+    }
+    
     var body: some View {
         VStack {
             TextField("Title", text: $title)
@@ -48,7 +57,7 @@ struct NoteDetail: View {
 }
 
 #Preview {
-    NoteDetail()
+    NoteDetail(note: Note(id: 1, title: "Note", details: "Note Details"))
 }
 
 extension NoteDetail {

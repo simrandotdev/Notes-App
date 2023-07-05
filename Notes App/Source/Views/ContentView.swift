@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import Observation
 
 struct ContentView: View {
+    
+    @State private var flvd = FoldersListViewData()
+    
     var body: some View {
         NavigationStack {
             FoldersList()
+                .environment(flvd)
         }
     }
 }
