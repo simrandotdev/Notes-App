@@ -12,7 +12,7 @@ struct NotesList: View {
     @State var viewData: NotesListViewData
     
     init(folder: Folder) {
-        _viewData = State(initialValue: NotesListViewData(notes: folder.notes))
+        _viewData = State(initialValue: NotesListViewData(folder: folder))
     }
     
     @State private var searchText: String = ""
@@ -26,8 +26,8 @@ struct NotesList: View {
             }
             
         }
-        .navigationTitle("All iCloud")
-        .searchable(text: $searchText,
+        .navigationTitle(viewData.folderName)
+        .searchable(text: $viewData.searchText,
                     placement: .navigationBarDrawer(displayMode: .always),
                     prompt: Text("Search"))
         .toolbar(content: {

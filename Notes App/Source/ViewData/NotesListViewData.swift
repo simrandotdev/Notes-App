@@ -12,8 +12,14 @@ import Observation
 final class NotesListViewData {
     
     var notes: [Note] = []
+    var folderName: String = ""
+    var searchText: String = ""
+    var totalNotes: String {
+        return "\(notes.count)"
+    }
     
-    init(notes: [Note]) {
-        self.notes = notes
+    init(folder: Folder) {
+        self.notes = folder.notes
+        self.folderName = folder.name
     }
 }
