@@ -9,12 +9,16 @@ import SwiftUI
 
 struct NotesList: View {
     
-    var folder: Folder
+    @State var viewData: NotesListViewData
+    
+    init(folder: Folder) {
+        _viewData = State(initialValue: NotesListViewData(notes: folder.notes))
+    }
     
     @State private var searchText: String = ""
     
     var body: some View {
-        List(folder.notes, id: \.id) { note in
+        List(viewData.notes, id: \.id) { note in
             NavigationLink {
                 NoteDetail(note: note)
             } label: {
