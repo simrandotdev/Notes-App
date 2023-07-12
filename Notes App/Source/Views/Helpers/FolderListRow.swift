@@ -9,6 +9,9 @@ import SwiftUI
 
 struct FolderListRow: View {
     
+    var title: String
+    var subtitle: String
+    
     var body: some View {
         NavigationLink {
             NotesList()
@@ -16,11 +19,11 @@ struct FolderListRow: View {
             HStack {
                 Image(systemName: "folder")
                     .foregroundStyle(Color.accentColor)
-                Text("All Cloud")
+                Text(title)
                 
                 Spacer()
                 
-                Text("5")
+                Text(subtitle)
                     .foregroundStyle(Color(.secondaryLabel))
             }
         }
@@ -28,5 +31,5 @@ struct FolderListRow: View {
 }
 
 #Preview {
-    FolderListRow()
+    FolderListRow(title: "All Cloud", subtitle: "5")
 }

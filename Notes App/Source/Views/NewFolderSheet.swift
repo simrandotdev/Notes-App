@@ -10,6 +10,7 @@ import SwiftUI
 struct NewFolderSheet: View {
     
     @Binding var showNewFolderSheet: Bool
+    @Environment(FoldersListViewData.self) private var viewData: FoldersListViewData
     @Environment(\.dismiss) var dismiss
     @State private var newFolderName = ""
     
@@ -44,6 +45,7 @@ struct NewFolderSheet: View {
     }
     
     private func saveAction() {
+        viewData.add(folderName: newFolderName)
         dismiss()
     }
 }

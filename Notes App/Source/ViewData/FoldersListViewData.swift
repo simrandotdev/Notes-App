@@ -12,4 +12,16 @@ import Observation
 final class FoldersListViewData {
     
     var folders: [Folder] = []
+    
+    private var dataStore = DataStore()
+    
+    func add(folderName: String) {
+        let folder = Folder(name: folderName, notes: [])
+        folders.append(folder)
+        dataStore.set(folders, key: "folders")
+    }
+    
+    func fetch() {
+        folders = dataStore.object(forKey: "folders", type: [Folder].self) ?? []
+    }
 }

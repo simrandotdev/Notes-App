@@ -16,8 +16,11 @@ struct FoldersList: View {
     var body: some View {
         VStack {
             List(viewData.folders, id: \.id) { folder in
-                
+                FolderListRow(title: folder.name, subtitle: String(folder.totalNotes))
             }
+        }
+        .onAppear {
+            viewData.fetch()
         }
         .navigationTitle("Folders")
         .toolbar(content: {
