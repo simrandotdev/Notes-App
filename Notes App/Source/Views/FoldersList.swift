@@ -6,20 +6,17 @@
 //
 
 import SwiftUI
+import Observation
 
 struct FoldersList: View {
     
+    @Environment(FoldersListViewData.self) private var viewData: FoldersListViewData
     @State private var showNewFolderSheet = false
     
     var body: some View {
         VStack {
-            List {
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
-                FolderListRow()
+            List(viewData.folders, id: \.id) { folder in
+                
             }
         }
         .navigationTitle("Folders")

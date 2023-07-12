@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var foldersListViewData = FoldersListViewData()
+    
     var body: some View {
         NavigationStack {
             FoldersList()
+                .environment(foldersListViewData)
         }
     }
 }

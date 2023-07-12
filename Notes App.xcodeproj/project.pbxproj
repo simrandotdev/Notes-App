@@ -20,6 +20,7 @@
 		3DAEBB8B2A546B160029D5C9 /* NewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEBB8A2A546B160029D5C9 /* NewNote.swift */; };
 		3DBEC74F2A5E577400FFA683 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC74E2A5E577400FFA683 /* Folder.swift */; };
 		3DBEC7512A5E57CB00FFA683 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7502A5E57CB00FFA683 /* Note.swift */; };
+		3DBEC7542A5E5C5300FFA683 /* FoldersListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3DAEBB8A2A546B160029D5C9 /* NewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNote.swift; sourceTree = "<group>"; };
 		3DBEC74E2A5E577400FFA683 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		3DBEC7502A5E57CB00FFA683 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersListViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		3DAEBB7B2A5461F50029D5C9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3DBEC7522A5E5C4500FFA683 /* ViewData */,
 				3DBEC74D2A5E576500FFA683 /* Models */,
 				3DAEBB7A2A5461EC0029D5C9 /* Views */,
 			);
@@ -132,6 +135,14 @@
 				3DBEC7502A5E57CB00FFA683 /* Note.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3DBEC7522A5E5C4500FFA683 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBEC7542A5E5C5300FFA683 /* FoldersListViewData.swift in Sources */,
 				3DAEBB852A5466A40029D5C9 /* NotesListRow.swift in Sources */,
 				3DBEC74F2A5E577400FFA683 /* Folder.swift in Sources */,
 				3DAEBB832A5464660029D5C9 /* NotesList.swift in Sources */,
