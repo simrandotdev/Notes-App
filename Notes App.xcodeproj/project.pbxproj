@@ -18,6 +18,8 @@
 		3DAEBB872A5467730029D5C9 /* NoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEBB862A5467730029D5C9 /* NoteDetail.swift */; };
 		3DAEBB892A54690C0029D5C9 /* NewFolderSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEBB882A54690C0029D5C9 /* NewFolderSheet.swift */; };
 		3DAEBB8B2A546B160029D5C9 /* NewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEBB8A2A546B160029D5C9 /* NewNote.swift */; };
+		3DBEC74F2A5E577400FFA683 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC74E2A5E577400FFA683 /* Folder.swift */; };
+		3DBEC7512A5E57CB00FFA683 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7502A5E57CB00FFA683 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3DAEBB862A5467730029D5C9 /* NoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetail.swift; sourceTree = "<group>"; };
 		3DAEBB882A54690C0029D5C9 /* NewFolderSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFolderSheet.swift; sourceTree = "<group>"; };
 		3DAEBB8A2A546B160029D5C9 /* NewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNote.swift; sourceTree = "<group>"; };
+		3DBEC74E2A5E577400FFA683 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		3DBEC7502A5E57CB00FFA683 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		3DAEBB7B2A5461F50029D5C9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3DBEC74D2A5E576500FFA683 /* Models */,
 				3DAEBB7A2A5461EC0029D5C9 /* Views */,
 			);
 			path = Source;
@@ -118,6 +123,15 @@
 				3DAEBB842A5466A40029D5C9 /* NotesListRow.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3DBEC74D2A5E576500FFA683 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DBEC74E2A5E577400FFA683 /* Folder.swift */,
+				3DBEC7502A5E57CB00FFA683 /* Note.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +205,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DAEBB852A5466A40029D5C9 /* NotesListRow.swift in Sources */,
+				3DBEC74F2A5E577400FFA683 /* Folder.swift in Sources */,
 				3DAEBB832A5464660029D5C9 /* NotesList.swift in Sources */,
 				3DAEBB872A5467730029D5C9 /* NoteDetail.swift in Sources */,
 				3DAEBB6E2A5460EA0029D5C9 /* ContentView.swift in Sources */,
 				3DAEBB7E2A5462160029D5C9 /* FoldersList.swift in Sources */,
 				3DAEBB812A5463660029D5C9 /* FolderListRow.swift in Sources */,
+				3DBEC7512A5E57CB00FFA683 /* Note.swift in Sources */,
 				3DAEBB8B2A546B160029D5C9 /* NewNote.swift in Sources */,
 				3DAEBB892A54690C0029D5C9 /* NewFolderSheet.swift in Sources */,
 				3DAEBB6C2A5460EA0029D5C9 /* NotesApp.swift in Sources */,
