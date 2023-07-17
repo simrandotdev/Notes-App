@@ -22,6 +22,7 @@
 		3DBEC7512A5E57CB00FFA683 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7502A5E57CB00FFA683 /* Note.swift */; };
 		3DBEC7542A5E5C5300FFA683 /* FoldersListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */; };
 		3DBEC7572A5E668900FFA683 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7562A5E668900FFA683 /* DataStore.swift */; };
+		3DBEC7592A5EF35D00FFA683 /* NotesListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC7582A5EF35D00FFA683 /* NotesListViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		3DBEC7502A5E57CB00FFA683 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersListViewData.swift; sourceTree = "<group>"; };
 		3DBEC7562A5E668900FFA683 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		3DBEC7582A5EF35D00FFA683 /* NotesListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBEC7532A5E5C5300FFA683 /* FoldersListViewData.swift */,
+				3DBEC7582A5EF35D00FFA683 /* NotesListViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				3DAEBB872A5467730029D5C9 /* NoteDetail.swift in Sources */,
 				3DAEBB6E2A5460EA0029D5C9 /* ContentView.swift in Sources */,
 				3DAEBB7E2A5462160029D5C9 /* FoldersList.swift in Sources */,
+				3DBEC7592A5EF35D00FFA683 /* NotesListViewData.swift in Sources */,
 				3DAEBB812A5463660029D5C9 /* FolderListRow.swift in Sources */,
 				3DBEC7512A5E57CB00FFA683 /* Note.swift in Sources */,
 				3DAEBB8B2A546B160029D5C9 /* NewNote.swift in Sources */,

@@ -8,11 +8,10 @@
 import Foundation
 import Observation
 
-@Observable
-final class Folder: Codable, Identifiable {
+final class Folder: Codable {
     let id: UUID
     let name: String
-    let notes: [Note]
+    var notes: [Note]
     var totalNotes: Int { notes.count }
     
     init(id: UUID = UUID(), name: String, notes: [Note]) {

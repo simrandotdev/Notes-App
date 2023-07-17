@@ -8,11 +8,11 @@
 import Foundation
 import Observation
 
-@Observable
-final class Note: Codable, Identifiable {
+
+final class Note: Codable{
     let id: UUID
-    let title: String
-    let details: String
+    var title: String
+    var details: String
     
     init(id: UUID = UUID(), title: String, details: String) {
         self.id = id
